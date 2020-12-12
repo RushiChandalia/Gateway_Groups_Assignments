@@ -1,0 +1,136 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+* {
+  font-family: Montserrat;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #1d1b1b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  padding-left: 45px;
+  padding-right: 45px;
+  height: 10vh;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  font-size: 20px;
+  /* background-color: aqua; */
+}
+
+#logo_image {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+.footer {
+  background-color: #1d1b1b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: fit-content;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin: 0;
+}
+
+.footer_links,
+.footer_links a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 18px;
+}
+
+.footer_social,
+.footer_social a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+}
+
+.footer_address,
+.footer_address pre {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+}
+.banner_div {
+  height: 75vh;
+
+  margin: 0;
+}
+#home_banner {
+  height: 75vh;
+  width: 100%;
+  margin: 0;
+}
+
+.banner_punchline {
+  position: relative;
+  z-index: 0;
+  top: -35%;
+  left: 10%;
+  color: #ffff;
+  font-weight: bolder;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1px;
+  width: 50%;
+}
+.home_container {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+/*#ec4d37;*/
+
+.banner_punchline a {
+  padding-top: 15px;
+  font-size: 30px;
+  text-decoration: underline;
+  color: #ec4d37;
+}
+
+.homeintro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}
+.home_intro {
+  font-size: 18px;
+  font-weight: 500;
+}
