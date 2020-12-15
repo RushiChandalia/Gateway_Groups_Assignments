@@ -5,10 +5,10 @@ namespace SourceControlFinalAssingment.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class UserData : DbContext
+    public partial class Model1 : DbContext
     {
-        public UserData()
-            : base("name=UserData")
+        public Model1()
+            : base("name=Model1")
         {
         }
 
@@ -22,6 +22,10 @@ namespace SourceControlFinalAssingment.Models
 
             modelBuilder.Entity<UserTable>()
                 .Property(e => e.Password)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<UserTable>()
+                .Property(e => e.ErrorMessage)
                 .IsUnicode(false);
         }
     }
