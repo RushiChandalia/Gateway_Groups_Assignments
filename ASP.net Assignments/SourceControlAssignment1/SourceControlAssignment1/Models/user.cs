@@ -29,6 +29,7 @@ namespace SourceControlAssignment1.Models
         public int PhoneNumber { get; set; }
         [MaxLength(30)]
         public string Address { get; set; }
+
         public int Age { get; set; }
     }
 }
