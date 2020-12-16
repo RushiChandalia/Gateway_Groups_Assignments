@@ -9,9 +9,14 @@ namespace SourceControlFinalAssingment.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult HomeIndex()
         {
             return View();
+        }
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index", "Login");
         }
     }
 }

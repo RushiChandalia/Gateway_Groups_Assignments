@@ -8,7 +8,7 @@ namespace SourceControlFinalAssingment.Models
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model11")
         {
         }
 
@@ -22,6 +22,10 @@ namespace SourceControlFinalAssingment.Models
 
             modelBuilder.Entity<UserTable>()
                 .Property(e => e.Password)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<UserTable>()
+                .Property(e => e.Email)
                 .IsUnicode(false);
 
             modelBuilder.Entity<UserTable>()

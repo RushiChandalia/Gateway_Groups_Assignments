@@ -17,6 +17,7 @@
             left:40%;
             border: 1px black solid;
             padding:10px;
+            width:400px;
           
         }
         .field-validation-error{
@@ -33,6 +34,7 @@
             <table class="form-table">
                 <tr>
                     <td>Login Page</td>
+                    
                 </tr>
                 <tr>
                     <td>
@@ -58,14 +60,18 @@
                
                 </tr>
                 <tr>
+                    <td></td>
                     <td colspan="2"><label class="field-validation-error">@Html.DisplayFor(model => model.ErrorMessage)</label></td>
 
                 </tr>
                 <tr>
-                     <td>
+                    <td></td>
+                    <td>
                         <input type="submit" name="name" value="Login" />
+                        <input type="reset" name="reset" value="Reset" />
                     </td>
-                    <td><input type="reset" name="reset" value="Reset"</td>
+                   
+                    <td>@Html.ActionLink("Register", "Registration")</td>
                 </tr>
 
 

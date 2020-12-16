@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace SourceControlFinalAssingment.Controllers
 {
@@ -28,10 +29,33 @@ namespace SourceControlFinalAssingment.Controllers
                 {
                     Session["UserId"] = UserDetails.UserId;
                     Session["UserName"] = UserDetails.UserName;
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("HomeIndex", "Home");
                 }
             }
-            return View();
+          
         }
+        [HttpGet]
+        public ActionResult Registration(int id = 0)
+        {
+            UserTable userModel = new UserTable();
+            return View(userModel);
+        }
+
+
+        [HttpPost]
+        public ActionResult Registration(UserTable UserModel)
+        {
+            using (Model1 db = new Model1())
+            {
+                db.UserTables.Add(UserModel);
+                db.SaveChanges();
+                Session["Username"] = UserModel.UserName;
+            }
+            ModelState.Clear();
+            return RedirectToAction("HomeIndex", "Home");
+        }
+
+
+      
     }
 }
