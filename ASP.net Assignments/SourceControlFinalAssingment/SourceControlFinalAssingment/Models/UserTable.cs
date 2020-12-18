@@ -5,6 +5,7 @@ namespace SourceControlFinalAssingment.Models
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity;
     using System.Data.Entity.Spatial;
 
     [Table("UserTable")]
@@ -19,7 +20,7 @@ namespace SourceControlFinalAssingment.Models
         public string UserName { get; set; }
        
         [Required(ErrorMessage = "Password is Required")]
-        [MinLength(6)]
+        [MinLength(6,ErrorMessage ="Password should be more then 6 character")]
         [DataType(DataType.Password)]
         [StringLength(100)]
         public string Password { get; set; }
@@ -39,4 +40,10 @@ namespace SourceControlFinalAssingment.Models
         [StringLength(50)]
         public string ErrorMessage { get; set; }
     }
+    public class UserDBContext : DbContext
+    {
+        public virtual DbSet<UserTable> UserTables { get; set; }
+    }
 }
+
+ 
