@@ -16,7 +16,7 @@ namespace SourceControlFinalAssingment.Controllers
         {
             return View();
         }
-        [HttpGet]
+        [HttpPost]
       public ActionResult Auth(UserTable UserModel)
         {
             var UserDetails = db.UserTables.Where(x => x.UserName == UserModel.UserName && x.Password == UserModel.Password).FirstOrDefault();
