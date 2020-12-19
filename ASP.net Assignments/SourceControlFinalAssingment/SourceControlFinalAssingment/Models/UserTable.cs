@@ -5,11 +5,14 @@ namespace SourceControlFinalAssingment.Models
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity;
     using System.Data.Entity.Spatial;
 
     [Table("UserTable")]
     public partial class UserTable
     {
+       
+
         [Key]
         public int UserId { get; set; }
 
@@ -19,13 +22,17 @@ namespace SourceControlFinalAssingment.Models
         public string UserName { get; set; }
        
         [Required(ErrorMessage = "Password is Required")]
+    
         [MinLength(6)]
         [DataType(DataType.Password)]
         [StringLength(100)]
         public string Password { get; set; }
-
+        [NotMapped]
+      
         [Compare("Password")]
         [Required]
+        [DataType(DataType.Password)]
+
         public string ConfirmPassword { get; set; }
 
         [Required(ErrorMessage = "Email is Required")]
@@ -35,8 +42,14 @@ namespace SourceControlFinalAssingment.Models
 
         [Range(13,100, ErrorMessage= "Age Must be between 13 and 100")]
         public int Age { get; set; }
-
+        [NotMapped]
         [StringLength(50)]
         public string ErrorMessage { get; set; }
     }
+    public class UserDBContext : DbContext
+    {
+        public virtual DbSet<UserTable> UserTables { get; set; }
+    }
 }
+
+ 
