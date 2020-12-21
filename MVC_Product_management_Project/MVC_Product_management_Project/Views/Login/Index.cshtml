@@ -1,0 +1,76 @@
+﻿@model MVC_Product_management_Project.Models.Users
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+
+    <link href="@Url.Content("~/Content/Login.css")" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <div class="form-container">
+            @using (Html.BeginForm("Auth", "Login", FormMethod.Post))
+            {
+                <table class="form-table">
+
+                    <tr id="row-1">
+                        <td>
+                            @Html.LabelFor(model => model.UserName)
+                        </td>
+                        <td>@Html.EditorFor(model => model.UserName)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>@Html.ValidationMessageFor(model => model.UserName)</td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(model => model.Password)
+                        </td>
+                        <td>@Html.EditorFor(model => model.Password)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>@Html.ValidationMessageFor(model => model.Password)</td>
+                        <td>@Html.ValidationMessageFor(model => model.Password)</td>
+
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2"><label class="field-validation-error">@Html.DisplayFor(model => model.ErrorMessage)</label></td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit" name="name" value="Login">Login</button>
+                            <button type="reset" value="Reset" class="btn btn-default">Reset</button>
+                            @Html.ActionLink("Register?", "Registration")
+                        </td>
+
+
+                    </tr>
+
+
+                </table>
+            }
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</body>
+</html>

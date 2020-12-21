@@ -16,7 +16,7 @@ namespace MVC_Product_management_Project
         {
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+          
             RouteConfig.RegisterRoutes(RouteTable.Routes);            
         }
     }

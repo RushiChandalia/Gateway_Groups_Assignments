@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+    if (Session["UserName"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomeIndex</title>
+    <link href="@Url.Content("~/Content/Home.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+        <header class="header-container">
+            @Html.ActionLink("Logout", "Logout")
+        </header>
+        <div class="main-div">
+            <h1>Hello There,</h1>&nbsp;&nbsp;&nbsp; <span>@Session["UserName"]</span>
+        </div>
+    </div>
+</body>
+</html>
