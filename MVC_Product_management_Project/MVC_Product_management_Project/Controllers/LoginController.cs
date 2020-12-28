@@ -48,11 +48,28 @@ namespace MVC_Product_management_Project.Controllers
         public ActionResult Registration(Users UserModel)
         {
             using (UsersDBContext db = new UsersDBContext())
-            {
+            try{
                 db.Users.Add(UserModel);
                 db.SaveChanges();
                 Session["Username"] = UserModel.UserName;
             }
+                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+                {
+                    Exception raise = dbEx;
+                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            string message = string.Format("{0}:{1}",
+                                validationErrors.Entry.Entity.ToString(),
+                                validationError.ErrorMessage);
+                            // raise a new exception nesting  
+                            // the current instance as InnerException  
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
+                }
             ModelState.Clear();
             return RedirectToAction("HomeIndex", "Home");
         }
