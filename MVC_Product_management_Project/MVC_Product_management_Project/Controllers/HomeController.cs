@@ -18,5 +18,15 @@ namespace MVC_Product_management_Project.Controllers
             Session.Abandon();
             return RedirectToAction("Index", "Login");
         }
+        public ActionResult ProductList()
+        {
+            Session.Abandon();
+            return RedirectToAction("productList", "Product");
+        }
+        public ActionResult ProductAdd()
+        {
+            Session.Abandon();
+            return RedirectToAction("productAdd", "Product");
+        }
     }
 }
