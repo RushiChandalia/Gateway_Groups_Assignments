@@ -14,14 +14,21 @@
     <meta name="viewport" content="width=device-width" />
     <title>HomeIndex</title>
     <link href="@Url.Content("~/Content/Home.css")" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 <body>
-    <div>
+    <div class="body">
         <header class="header-container">
             @Html.ActionLink("Logout", "Logout")
         </header>
-        <div class="main-div">
-            <h1>Hello There,</h1>&nbsp;&nbsp;&nbsp; <span>@Session["UserName"]</span>
+        <div class="body-container">
+            <div class="left-menu">
+                @Html.ActionLink("Product List", "productList")
+                @Html.ActionLink("Add Product", "productAdd")
+            </div>
+            <div class="main-div">
+                <h1>Hello There,</h1>&nbsp;&nbsp;&nbsp; <span>@Session["UserName"]</span>
+            </div>
         </div>
     </div>
 </body>
