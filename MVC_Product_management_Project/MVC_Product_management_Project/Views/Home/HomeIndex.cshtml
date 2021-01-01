@@ -20,8 +20,19 @@
         <header class="header-container">
             @Html.ActionLink("Logout", "Logout")
         </header>
+<<<<<<< Updated upstream
         <div class="main-div">
             <h1>Hello There,</h1>&nbsp;&nbsp;&nbsp; <span>@Session["UserName"]</span>
+=======
+        <div class="body-container">
+            <div class="left-menu">
+                @Html.ActionLink("Product List", "ProductList", "Product")
+                @Html.ActionLink("Add Product", "AddProduct", "Product")
+            </div>
+            <div class="main-div">
+                <h1>Hello There,</h1>&nbsp;&nbsp;&nbsp; <span>@Session["UserName"]</span>
+            </div>
+>>>>>>> Stashed changes
         </div>
     </div>
 </body>
