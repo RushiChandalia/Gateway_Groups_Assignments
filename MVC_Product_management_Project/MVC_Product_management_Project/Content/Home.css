@@ -1,4 +1,4 @@
-﻿body{
+﻿.body{
     background-color: #034f84;
     height: 100vh;
     width: 100%;
@@ -8,13 +8,14 @@
     padding: 0px;
     margin: 0px;
     font-family: Roboto;
+    animation: fade-in 1s 0s ease;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #034f84;
     margin-right: 40px;
-    font-size:25px;
+    font-size: 20px;
 }
 
 .header-container {
@@ -27,7 +28,7 @@ a {
     align-items: center;
 }
 .main-div {
-    width: 100%;
+    width: 80%;
     height: 90vh;
     display: flex;
    
@@ -44,3 +45,36 @@ a {
         color: #f7786b;
         font-size:70px;
     }
+
+.left-menu {
+    height: 90vh;
+    width: 20%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+   
+    background-color: rgba(255, 255, 255, 0.60);
+}
+
+    .left-menu a {
+        margin-top: 30px;
+        font-size: 20px;
+        position:relative;
+        left:50px;
+    }
+        a:hover {
+            color:white;
+        }
+        .body-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+ @keyframes fade-in{
+            0%{
+                opacity:0;
+            }
+            50%,100%{
+                opacity:1;
+            }
+        }
