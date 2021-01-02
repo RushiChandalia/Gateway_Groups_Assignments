@@ -10,7 +10,8 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Registration</title>
-    <link href="@Url.Content("~/Content/Registration.css")" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
 </head>
@@ -22,69 +23,66 @@
             {
                 @Html.AntiForgeryToken()
 
-                <div class="form-horizontal">
+                
 
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-                        </div>
+                    <div class="form-floating mb-4">
+                        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingInput", placeholder = "Username" } })
+                        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label", For= "inputsm" })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
                     </div>
+              
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingPassword", placeholder = "Password" } })
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
+                <div class="form-floating mb-3">
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
+                    @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingPassword", placeholder = "Password" } })
+                    @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label" })
+                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                </div>
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
+                <div class="form-floating mb-3">
+
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingPassword", placeholder = "Password" } })
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingPassword", placeholder = "Password" } })
+                    @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label" })
+                    @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+                </div>
 
 
 
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <button type="submit" value="Create" class="btn btn-default">Submit</button>
-                            <button type="reset" value="Reset" class="btn btn-default">Reset</button>
 
-                            @Html.ActionLink("Already have an account?", "Index")
-                        </div>
+                <div class="form-floating mb-3">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-outline-success">Login</button>
+                        <button type="reset" class="btn btn-outline-danger " value="Reset" onClick="window.location.reload()">Reset</button>
+
+                        <input type="button" class="btn btn-primary m-4" value="Already have an account?" onclick="location.href= '@Url.Action("Index", "Login")'" />
                     </div>
                 </div>
+
             }
         </div>
         <div>
         </div>
 
-    </div>
+   
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
 </body>
 </html>
