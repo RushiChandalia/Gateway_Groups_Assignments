@@ -13,27 +13,53 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>HomeIndex</title>
-    <link href="@Url.Content("~/Content/Home.css")" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        a{
+            text-decoration:none;
+            color:white;
+            font-size:20px;
+        }
+        .card {
+            height: 90vh;
+            width:100%;
+           
+        }
+        .card-body{
+            height:100%;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+            background-color:aliceblue;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <header class="header-container">
-            @Html.ActionLink("Logout", "Logout")
-        </header>
-<<<<<<< Updated upstream
-        <div class="main-div">
-            <h1>Hello There,</h1>&nbsp;&nbsp;&nbsp; <span>@Session["UserName"]</span>
-=======
-        <div class="body-container">
-            <div class="left-menu">
-                @Html.ActionLink("Product List", "ProductList", "Product")
-                @Html.ActionLink("Add Product", "AddProduct", "Product")
+    <nav class="navbar navbar-dark bg-dark flex-end">
+        <div class="container-fluid justify-content-between m-2 ">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Action</button></li>
+                    <li><button class="dropdown-item" type="button">Another action</button></li>
+                    <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
             </div>
-            <div class="main-div">
-                <h1>Hello There,</h1>&nbsp;&nbsp;&nbsp; <span>@Session["UserName"]</span>
-            </div>
->>>>>>> Stashed changes
+            <button type="button" class="btn btn-outline-light" onclick="location.href= '@Url.Action("Logout", "Home")'">Logout</button>
+        </div>
+    </nav>
+    <div class="card">
+        <div class="card-body">
+            <h2>Hello There,</h2>&nbsp;&nbsp;&nbsp; <h1>@Session["UserName"]</h1>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
+                
+               
+                
+          
