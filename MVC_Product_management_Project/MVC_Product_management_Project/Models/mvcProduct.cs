@@ -7,7 +7,7 @@ using System.Web;
 
 namespace MVC_Product_management_Project.Models
 {
-    public class products
+    public class mvcProduct
     {
         public int Id { get; set; }
 
@@ -29,12 +29,6 @@ namespace MVC_Product_management_Project.Models
         [StringLength(100)]
         public string Long_Description { get; set; }
 
-        [Column("Small Image")]
-        [StringLength(50)]
-        public string Small_Image { get; set; }
 
-        [Column("Large Image")]
-        [StringLength(50)]
-        public string Large_Image { get; set; }
     }
 }

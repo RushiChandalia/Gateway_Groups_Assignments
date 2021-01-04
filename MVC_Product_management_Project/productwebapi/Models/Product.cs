@@ -28,12 +28,6 @@ namespace productwebapi.Models
         [StringLength(100)]
         public string Long_Description { get; set; }
 
-        [Column("Small Image")]
-        [StringLength(50)]
-        public string Small_Image { get; set; }
-
-        [Column("Large Image")]
-        [StringLength(50)]
-        public string Large_Image { get; set; }
+      
     }
 }

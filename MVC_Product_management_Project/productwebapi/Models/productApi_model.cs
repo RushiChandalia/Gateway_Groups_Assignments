@@ -32,13 +32,7 @@ namespace productwebapi.Models
                 .Property(e => e.Long_Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Product>()
-                .Property(e => e.Small_Image)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Product>()
-                .Property(e => e.Large_Image)
-                .IsUnicode(false);
+       
         }
     }
 }
