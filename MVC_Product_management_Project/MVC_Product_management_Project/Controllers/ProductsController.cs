@@ -18,5 +18,15 @@ namespace MVC_Product_management_Project.Controllers
             productList = response.Content.ReadAsAsync<IEnumerable<mvcProduct>>().Result;
             return View(productList);
         }
+        [HttpGet]
+        public ActionResult Create(int id = 0)
+        {
+            return View(new mvcProduct());
+        }
+        [HttpPost]
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
