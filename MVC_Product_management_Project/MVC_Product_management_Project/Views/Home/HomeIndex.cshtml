@@ -43,9 +43,9 @@
                     Menu
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><button class="dropdown-item" type="button">Action</button></li>
-                    <li><button class="dropdown-item" type="button">Another action</button></li>
-                    <li><button class="dropdown-item" type="button">Something else here</button></li>
+                    <li><button class="dropdown-item" type="button" onclick="location.href= '@Url.Action("Index", "Products")'">Product List</button></li>
+                    <li><button class="dropdown-item" type="button" onclick="location.href= '@Url.Action("Create", "Products")'">Add to Product List</button></li>
+
                 </ul>
             </div>
             <button type="button" class="btn btn-outline-light" onclick="location.href= '@Url.Action("Logout", "Home")'">Logout</button>

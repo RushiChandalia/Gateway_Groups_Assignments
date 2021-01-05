@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1321
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Product_management_Project", "MVC_Product_management_Project\MVC_Product_management_Project.csproj", "{E719DE40-8F7F-4407-896B-05C7C015E4FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "productwebapi", "productwebapi\productwebapi.csproj", "{CF884F51-463B-41C2-9326-7D52BB26491E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E719DE40-8F7F-4407-896B-05C7C015E4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E719DE40-8F7F-4407-896B-05C7C015E4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E719DE40-8F7F-4407-896B-05C7C015E4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF884F51-463B-41C2-9326-7D52BB26491E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF884F51-463B-41C2-9326-7D52BB26491E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF884F51-463B-41C2-9326-7D52BB26491E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF884F51-463B-41C2-9326-7D52BB26491E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

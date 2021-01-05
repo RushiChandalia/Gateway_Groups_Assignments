@@ -23,6 +23,9 @@
         .form-container{
             width:400px;
         }
+        .field-validation-error {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -42,19 +45,14 @@
                     @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
 
                 </div>
-
-
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-2">
                     @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingPassword", placeholder = "Password" } })
                     @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
                     @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-
-
+                    <label class="field-validation-error">@Html.DisplayFor(model => model.ErrorMessage)</label>
                 </div>
-                @Html.ValidationMessageFor(model => model.ErrorMessage, "", new { @class = "text-danger" })
-
-
-                <div class="form-floating mb-3">
+              
+                <div class="form-floating">
                     <div class="col-md-offset-2 col-md-10">
                         <button type="submit" class="btn btn-outline-success">Login</button>
                         <button type="reset" class="btn btn-outline-danger " value="Reset" onClick="window.location.reload()">Reset</button>
