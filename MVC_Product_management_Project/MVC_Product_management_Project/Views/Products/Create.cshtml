@@ -2,6 +2,10 @@
 
 @{
     Layout = null;
+    if (Session["UserName"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
 }
 
 <!DOCTYPE html>
@@ -11,7 +15,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>Registration</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/themes/default.min.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <style>
         .container {
@@ -40,27 +45,28 @@
 
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-floating mb-4">
-                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingInput", placeholder = "Username" } })
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingInput", placeholder = "Name" } })
                     @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label", For = "inputsm" })
                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                 </div>
 
 
                 <div class="form-floating mb-3">
-                    @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingPassword", placeholder = "Password" } })
+                    @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingInput", placeholder = "Password" } })
                     @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label" })
                     @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
                 </div>
 
-              
+
+
 
                 <div class="form-floating mb-3">
-                    @Html.EditorFor(model => model.Short_Description, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingPassword", placeholder = "Password" } })
+                    @Html.EditorFor(model => model.Short_Description, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingInput", placeholder = "Short Description" } })
                     @Html.LabelFor(model => model.Short_Description, htmlAttributes: new { @class = "control-label" })
                     @Html.ValidationMessageFor(model => model.Short_Description, "", new { @class = "text-danger" })
                 </div>
                 <div class="form-floating mb-3">
-                    @Html.EditorFor(model => model.Long_Description, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingPassword", placeholder = "Password" } })
+                    @Html.EditorFor(model => model.Long_Description, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingInput", placeholder = "Short Description" } })
                     @Html.LabelFor(model => model.Long_Description, htmlAttributes: new { @class = "control-label" })
                     @Html.ValidationMessageFor(model => model.Long_Description, "", new { @class = "text-danger" })
                 </div>
@@ -72,6 +78,7 @@
                     <div class="col-md-offset-2 col-md-10">
                         <button type="submit" class="btn btn-outline-success">Create</button>
                         <button type="reset" class="btn btn-outline-danger " value="Reset" onClick="window.location.reload()">Reset</button>
+                        <button type="button" class="btn btn-outline-primary" onclick="location.href ='@Url.Action("Index", "Products")'">Back to Product List</button>
 
 
                     </div>
@@ -79,15 +86,28 @@
 
             }
         </div>
-        <div>
-        </div>
+
+    </div>
 
 
-        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-        <script src="~/Scripts/jquery.validate.min.js"></script>
-        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-        <script src="~/Scripts/jquery.validate.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="~/Scripts/alertify.min.js"></script>
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]'
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
 
+        function Delete(id) {
+            alertify.confirm('Web Api CRUD Operations','Are You Sure to Delete this Record ?',function(){
+                window.location.href  = '@Url.Action("Delete","Products")/'+id;
+            },null );
+        }
+    </script>
 </body>
 </html>

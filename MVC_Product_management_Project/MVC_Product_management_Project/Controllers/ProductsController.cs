@@ -18,15 +18,40 @@ namespace MVC_Product_management_Project.Controllers
             productList = response.Content.ReadAsAsync<IEnumerable<mvcProduct>>().Result;
             return View(productList);
         }
-        [HttpGet]
+       
         public ActionResult Create(int id = 0)
         {
-            return View(new mvcProduct());
+            if(id == 0){
+                return View(new mvcProduct());
+            }
+            else
+            {
+                HttpResponseMessage response = GlobalVariables.WebApiClient.GetAsync("Products/" + id.ToString()).Result;
+                return View(response.Content.ReadAsAsync<mvcProduct>().Result);
+            }
         }
         [HttpPost]
-        public ActionResult Create()
+        public ActionResult Create(mvcProduct prod)
         {
-            return View();
+           if (prod.Id == 0)
+            {
+                HttpResponseMessage response = GlobalVariables.WebApiClient.PostAsJsonAsync("Products", prod).Result;
+                TempData["SuccessMessage"] = "Saved Successfully";
+            }
+            else
+            {
+                HttpResponseMessage response = GlobalVariables.WebApiClient.PutAsJsonAsync("Products/" + prod.Id, prod).Result;
+                TempData["SuccessMessage"] = "Updated Successfully";
+            }
+            return RedirectToAction("Index");
+
+           
+        }
+        public ActionResult Delete(int id)
+        {
+            HttpResponseMessage response = GlobalVariables.WebApiClient.DeleteAsync("Products/" + id.ToString()).Result;
+            TempData["SuccessMessage"] = "Deleted Successfully";
+            return RedirectToAction("Index");
         }
     }
 }
