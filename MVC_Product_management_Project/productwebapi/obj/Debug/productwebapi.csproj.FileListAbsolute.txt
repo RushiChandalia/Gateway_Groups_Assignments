@@ -66,3 +66,5 @@ C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_
 C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\productwebapi\obj\Debug\productwebapi.csproj.CopyComplete
 C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\productwebapi\obj\Debug\productwebapi.dll
 C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\productwebapi\obj\Debug\productwebapi.pdb
+C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\productwebapi\bin\NLog.dll
+C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\productwebapi\bin\NLog.xml

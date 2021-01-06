@@ -39,13 +39,13 @@
 
 
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-floating mb-4">
+                <div class="form-floating">
                     @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingInput", placeholder = "Username" } })
                     @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label", For = "inputsm" })
                     @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
 
                 </div>
-                <div class="form-floating mb-1">
+                <div class="form-floating">
                     @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control mt-4", id = "floatingPassword", placeholder = "Password" } })
                     @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
                     @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
@@ -54,11 +54,11 @@
                 </div>
                 <label class="field-validation-error">@Html.DisplayFor(model => model.ErrorMessage)</label>
                 <div class="form-floating">
-                    <div class="col-md-offset-2 col-md-10">
+                    <div>
                         <button type="submit" class="btn btn-outline-success">Login</button>
-                        <button type="reset" class="btn btn-outline-danger " value="Reset" onClick="window.location.reload()">Reset</button>
+                        &nbsp; <button type="reset" class="btn btn-outline-danger " value="Reset" onClick="window.location.reload()">Reset</button>
 
-                        <input type="button" class="btn btn-primary m-4" value="Register" onclick="location.href= '@Url.Action("Registration", "Login")'" />
+                        &nbsp; <input type="button" class="btn btn-primary m-4" value="Register" onclick="location.href= '@Url.Action("Registration", "Login")'" />
                     </div>
                 </div>
 

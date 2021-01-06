@@ -100,7 +100,7 @@
                         </td>
                         <td>
                             <button type="button" class="btn btn-outline-info"> @Html.ActionLink("Edit", "Create", new { id = item.Id }) </button>
-                            <button type="button" class="btn btn-outline-danger" onclick="Delete(@item.Id)"> Delete</button>
+                            &nbsp;&nbsp; <button type="button" class="btn btn-outline-danger" onclick="Delete(@item.Id)"> Delete</button>
                         </td>
                     </tr>
 
@@ -112,7 +112,7 @@
         </table>
         <div>
             <button type="button" class="btn btn-outline-success" onclick="location.href ='@Url.Action("Create", "Products")'">Create A Product</button>
-            <button type="button" class="btn btn-outline-primary" onclick="location.href ='@Url.Action("HomeIndex", "Home")'">Back to Dashboard</button>
+            &nbsp;&nbsp; &nbsp;<button type="button" class="btn btn-outline-primary" onclick="location.href ='@Url.Action("HomeIndex", "Home")'">Back to Dashboard</button>
         </div>
     </div>
 

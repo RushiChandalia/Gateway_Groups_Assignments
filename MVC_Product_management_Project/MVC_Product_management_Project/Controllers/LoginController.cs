@@ -7,21 +7,27 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MVC_Product_management_Project.Models;
+using NLog;
 
 namespace MVC_Product_management_Project.Controllers
 {
     public class LoginController : Controller
     {
         private UsersDBContext db = new UsersDBContext();
+        Logger logger = LogManager.GetCurrentClassLogger();
 
         // GET: Users
         public ActionResult Index()
         {
             return View();
+           
         }
+        
         [HttpPost]
-        public ActionResult Auth(Users UserModel)
+        public ActionResult Auth(Users UserModel) //POST: Auth() posts the user data to database
+
         {
+            try { 
             var UserDetails = db.Users.Where(x => x.UserName == UserModel.UserName && x.Password == UserModel.Password).FirstOrDefault();
             if (UserDetails == null)
             {
@@ -34,8 +40,15 @@ namespace MVC_Product_management_Project.Controllers
                 Session["UserName"] = UserDetails.UserName;
                 return RedirectToAction("HomeIndex", "Home");
             }
+            }
+            catch (Exception ex)   //Exception Handling
+            {
+                logger.Error(ex,"Error occured in Home controller Index Action");
 
+            }
+            return View();
         }
+
         [HttpGet]
         public ActionResult Registration(int id = 0)
         {
@@ -45,7 +58,7 @@ namespace MVC_Product_management_Project.Controllers
 
 
         [HttpPost]
-        public ActionResult Registration(Users UserModel)
+        public ActionResult Registration(Users UserModel) //Registered User data is saved to data base  
         {
             using (UsersDBContext db = new UsersDBContext())
             try{
@@ -63,8 +76,6 @@ namespace MVC_Product_management_Project.Controllers
                             string message = string.Format("{0}:{1}",
                                 validationErrors.Entry.Entity.ToString(),
                                 validationError.ErrorMessage);
-                            // raise a new exception nesting  
-                            // the current instance as InnerException  
                             raise = new InvalidOperationException(message, raise);
                         }
                     }

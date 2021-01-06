@@ -166,3 +166,5 @@ C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_
 C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\MVC_Product_management_Project\obj\Debug\MVC_Product_management_Project.csproj.CopyComplete
 C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\MVC_Product_management_Project\obj\Debug\MVC_Product_management_Project.dll
 C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\MVC_Product_management_Project\obj\Debug\MVC_Product_management_Project.pdb
+C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\MVC_Product_management_Project\bin\NLog.dll
+C:\Users\admin\Desktop\ASPNET\Gateway_Groups_Assignments\MVC_Product_management_Project\MVC_Product_management_Project\bin\NLog.xml
