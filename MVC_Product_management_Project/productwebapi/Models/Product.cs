@@ -28,6 +28,6 @@ namespace productwebapi.Models
         [StringLength(100)]
         public string Long_Description { get; set; }
 
-      
+        public string ImagePath { get; set; }
     }
 }

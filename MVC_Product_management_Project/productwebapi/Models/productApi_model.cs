@@ -8,7 +8,7 @@ namespace productwebapi.Models
     public partial class productApi_model : DbContext
     {
         public productApi_model()
-            : base("name=productApi_model")
+            : base("name=productApi_model1")
         {
         }
 
@@ -32,7 +32,9 @@ namespace productwebapi.Models
                 .Property(e => e.Long_Description)
                 .IsUnicode(false);
 
-       
+            modelBuilder.Entity<Product>()
+                .Property(e => e.ImagePath)
+                .IsUnicode(false);
         }
     }
 }

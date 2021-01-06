@@ -70,6 +70,9 @@
                     <th scope="col">
                         @Html.DisplayNameFor(model => model.Long_Description)
                     </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.ImagePath)
+                    </th>
                     <th></th>
                 </tr>
             </thead>
@@ -98,6 +101,7 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Long_Description)
                         </td>
+                        <td></td>
                         <td>
                             <button type="button" class="btn btn-outline-info"> @Html.ActionLink("Edit", "Create", new { id = item.Id }) </button>
                             &nbsp;&nbsp; <button type="button" class="btn btn-outline-danger" onclick="Delete(@item.Id)"> Delete</button>
