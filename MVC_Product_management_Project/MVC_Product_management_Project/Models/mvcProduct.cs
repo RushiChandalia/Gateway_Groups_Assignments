@@ -11,20 +11,24 @@ namespace MVC_Product_management_Project.Models
     public class mvcProduct
     {
         public int Id { get; set; }
+        [Required]
 
         [StringLength(50)]
         public string Name { get; set; }
+        [Required]
 
         public double? Price { get; set; }
+        [Required]
 
         [StringLength(50)]
         public string Category { get; set; }
 
         public int? Quantity { get; set; }
-
+        [Required]
         [Column("Short Description")]
         [StringLength(50)]
         public string Short_Description { get; set; }
+        [Required]
 
         [Column("Long Description")]
         [StringLength(100)]

@@ -70,10 +70,8 @@
                     <th scope="col">
                         @Html.DisplayNameFor(model => model.Long_Description)
                     </th>
-                    <th scope="col">
-                        @Html.DisplayNameFor(model => model.ImagePath)
-                    </th>
-                    <th></th>
+                    <th scope="col"></th>
+                   <th></th>
                 </tr>
             </thead>
 
@@ -134,7 +132,7 @@
         });
 
         function Delete(id) {
-            alertify.confirm('Web Api CRUD Operations','Are You Sure to Delete this Record ?',function(){
+            alertify.confirm('Product Management','Are You Sure to Delete this Record?',function(){
                 window.location.href  = '@Url.Action("Delete","Products")/'+id;
             },null );
         }
