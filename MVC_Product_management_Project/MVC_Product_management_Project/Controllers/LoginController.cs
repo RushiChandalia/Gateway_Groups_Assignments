@@ -49,6 +49,7 @@ namespace MVC_Product_management_Project.Controllers
             return View();
         }
 
+        
         [HttpGet]
         public ActionResult Registration(int id = 0)
         {
