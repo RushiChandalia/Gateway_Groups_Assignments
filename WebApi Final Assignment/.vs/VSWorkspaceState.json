@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\HotelManagementWebApi",
-    "\\HotelManagementWebApi\\HotelManagementWebApi"
+    "\\HotelManagementWebApi\\HotelManagementWebApi\\Properties"
   ],
-  "SelectedNode": "\\HotelManagementWebApi\\HotelManagementWebApi\\Web.config",
+  "SelectedNode": "\\HotelManagementWebApi\\HotelManagementWebApi",
   "PreviewInSolutionExplorer": false
 }

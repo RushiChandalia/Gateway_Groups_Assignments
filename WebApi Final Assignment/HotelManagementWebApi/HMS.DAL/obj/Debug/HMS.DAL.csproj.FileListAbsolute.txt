@@ -14,3 +14,19 @@ C:\projects\DMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.csproj.CoreCompileInputs.cache
 C:\projects\DMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.csproj.CopyComplete
 C:\projects\DMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.dll
 C:\projects\DMS.WebApi\HMS.DAL\obj\Debug\HMS.DAL.pdb
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\HMS.DAL.dll.config
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\HMS.DAL.dll
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\HMS.DAL.pdb
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\AutoMapper.dll
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\EntityFramework.dll
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\HMS.Models.dll
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\HMS.Models.pdb
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\AutoMapper.xml
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\EntityFramework.xml
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\obj\Debug\HMS.DAL.csprojAssemblyReference.cache
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\obj\Debug\HMS.DAL.csproj.CoreCompileInputs.cache
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\obj\Debug\HMS.DAL.csproj.CopyComplete
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\obj\Debug\HMS.DAL.dll
+C:\Users\rushi.chandalia\Desktop\Gateway_Groups_Assignments\WebApi Final Assignment\HotelManagementWebApi\HMS.DAL\obj\Debug\HMS.DAL.pdb
