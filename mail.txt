@@ -1,0 +1,19 @@
+To:  	  vimal.chauhan@thegatewaycorp.co.in
+Cc:  	  swapnil.pandya@thegatewaycorp.co.in
+
+Subject:  NodeJS assignment submission
+
+Dear Sir,
+Please find below the code for Assignment-1
+
+Doubts that I faced while solving the problem:
+1) How to separate the time and date from the result or only get date not time?
+2) Is it possible to use the inbuilt methods on array-like find or filter for this?
+3) how to dynamically Add objects to an array instead of hard coding it?
+
+Waiting for your valuable feedback.
+Regards,
+Rushi Chandalia
+PT-2021
+
+ 	

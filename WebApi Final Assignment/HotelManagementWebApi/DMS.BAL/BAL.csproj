@@ -72,13 +72,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HMS.DAL\HMS.DAL.csproj">
+    <ProjectReference Include="..\HMS.DAL\DAL.csproj">
       <Project>{A6E3210F-0BBF-4929-A669-3F5924DADFEA}</Project>
-      <Name>HMS.DAL</Name>
+      <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HMS.Models\HMS.Models.csproj">
+    <ProjectReference Include="..\HMS.Models\Models.csproj">
       <Project>{e07c6446-48d1-4fa1-a660-6427d2b10293}</Project>
-      <Name>HMS.Models</Name>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

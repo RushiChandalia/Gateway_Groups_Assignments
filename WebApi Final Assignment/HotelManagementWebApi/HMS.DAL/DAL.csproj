@@ -118,9 +118,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HMS.Models\HMS.Models.csproj">
+    <ProjectReference Include="..\HMS.Models\Models.csproj">
       <Project>{e07c6446-48d1-4fa1-a660-6427d2b10293}</Project>
-      <Name>HMS.Models</Name>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

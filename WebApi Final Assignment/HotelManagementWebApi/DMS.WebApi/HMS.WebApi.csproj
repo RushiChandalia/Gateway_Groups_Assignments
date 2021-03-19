@@ -269,17 +269,17 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DMS.BAL\HMS.BAL.csproj">
+    <ProjectReference Include="..\DMS.BAL\BAL.csproj">
       <Project>{cee625b2-fcc9-4dd5-b10e-ecf3dd2704f3}</Project>
-      <Name>HMS.BAL</Name>
+      <Name>BAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HMS.DAL\HMS.DAL.csproj">
+    <ProjectReference Include="..\HMS.DAL\DAL.csproj">
       <Project>{a6e3210f-0bbf-4929-a669-3f5924dadfea}</Project>
-      <Name>HMS.DAL</Name>
+      <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HMS.Models\HMS.Models.csproj">
+    <ProjectReference Include="..\HMS.Models\Models.csproj">
       <Project>{E07C6446-48D1-4FA1-A660-6427D2B10293}</Project>
-      <Name>HMS.Models</Name>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
