@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -36,5 +37,9 @@ namespace MVC_Product_management_Project.Models
 
         public string ImagePath { get; set; }
 
+    }
+    public class ProductDBContext : DbContext
+    {
+        public DbSet<mvcProduct> Products { get; set; }
     }
 }
